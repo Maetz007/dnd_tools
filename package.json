@@ -1,7 +1,7 @@
 {
-  "name": "patience-chat",
+  "name": "dnd_tools",
   "version": "1.0.0",
-  "description": "A communicative tool for Patience",
+  "description": "Tools for character creation",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
