@@ -1,14 +1,16 @@
-var myApp = angular.module('myApp', ['ngRoute', 'ui-bootstrap']);
+var myApp = angular.module('myApp', ['ngRoute']);
 
 myApp.config(['$routeProvider', function($routeProvider){
   $routeProvider
     .when('/entryPage', {
-      templateUrl: '/view/pages/entryPage.html',
+      templateUrl: '/views/pages/entryPage.html',
+      controller: 'entryPageController',
     })
     .when('/abilities', {
-      templateUrl: '/view/pages/abilities.html',
+      templateUrl: '/views/pages/abilities.html',
+      controller: 'abilitiesController',
     })
     .otherwise({
-      redirectTo:'entryPage'
+      redirectTo:'/entryPage'
     }); // end routeProvider
 }]); // end myApp

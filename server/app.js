@@ -13,8 +13,8 @@ app.use(express.static('public'));
 // var mongodbUri = 'mongodb://dnd_tools:poopoo12@ds159328.mlab.com:59328/dnd_tools';
 // mongoose.connect(mongodbUri);
 
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
 // app.use(session({
 //    secret: 'secret',
@@ -31,6 +31,6 @@ app.use(express.static('public'));
 
 app.get('/*', function(req,res){
   console.log('You Are in L');
-  var file = req.params[0] || 'views/pages/index.html';
+  var file = req.params[0] || 'views/index.html';
   res.sendFile(path.join(__dirname, '/public/', file));
 }); // end app.get base URL
